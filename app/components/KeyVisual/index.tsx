@@ -15,11 +15,12 @@ export default function KeyVisual() {
   ];
 
   return (
-    <section className="relative w-full h-[400px] md:h-[500px]">
+    <section className="relative w-full h-[400px] md:h-[500px] bg-stone-900">
       <Image
         src="/images/stage.jpeg"
         alt="カラオケ喫茶コンパ ステージ"
         fill
+        sizes="100vw"
         style={{ objectFit: "cover", objectPosition: "left center" }}
         priority
       />
@@ -28,8 +29,8 @@ export default function KeyVisual() {
 
       <div className="absolute inset-0 flex flex-col justify-center px-8 md:px-16 max-w-4xl mx-auto left-0 right-0">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.1 }}
           className="inline-block bg-amber-400/30 border border-amber-300 text-amber-200 text-xs px-4 py-1 rounded-full mb-5 w-fit"
         >
@@ -37,8 +38,8 @@ export default function KeyVisual() {
         </motion.div>
 
         <motion.h1
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.2 }}
           className="text-3xl md:text-5xl font-bold text-white mb-3 leading-relaxed"
           style={{
@@ -52,8 +53,8 @@ export default function KeyVisual() {
         </motion.h1>
 
         <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.3 }}
           className="text-sm text-amber-300 mb-6"
         >
@@ -61,8 +62,8 @@ export default function KeyVisual() {
         </motion.p>
 
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.4 }}
           className="flex flex-wrap gap-2 mb-8"
         >
@@ -72,8 +73,8 @@ export default function KeyVisual() {
         </motion.div>
 
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.5 }}
         >
           <TelButton size="lg" />

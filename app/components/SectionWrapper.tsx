@@ -23,10 +23,10 @@ export default function SectionWrapper({
       id={id}
       data-layout="SectionWrapper"
       className={`${variantClass[variant]} border-b border-amber-100 py-16 px-6`}
-      initial={{ opacity: 0, y: 40 }}
-      whileInView={{ opacity: 1, y: 0 }}
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
-      viewport={{ once: true }}
+      viewport={{ once: true, margin: "-250px" }}
     >
       <div className="max-w-4xl mx-auto">{children}</div>
     </motion.section>

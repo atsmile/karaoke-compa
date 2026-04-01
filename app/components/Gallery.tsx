@@ -25,6 +25,7 @@ export default function Gallery() {
               src={photo.src}
               alt={photo.alt}
               fill
+              sizes="(max-width: 768px) 50vw, 33vw"
               style={{ objectFit: "cover" }}
             />
           </div>
