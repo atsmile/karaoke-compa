@@ -1,12 +1,14 @@
-import { MetadataRoute } from 'next'
+import { MetadataRoute } from "next";
+
+export const dynamic = "force-static";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
     {
-      url: 'https://karaoke-compa.com',
+      url: "https://karaoke-compa.com",
       lastModified: new Date(),
-      changeFrequency: 'monthly',
+      changeFrequency: "monthly",
       priority: 1,
     },
-  ]
+  ];
 }
