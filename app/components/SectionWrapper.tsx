@@ -1,5 +1,7 @@
+import { ReactNode } from "react";
+
 type Props = {
-  children: React.ReactNode;
+  children: ReactNode;
   variant?: "white" | "amber";
   id?: string;
 };
