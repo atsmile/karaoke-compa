@@ -1,3 +1,5 @@
+import SectionHeader from "./SectionHeader";
+
 export default function Price() {
   return (
     <section
@@ -5,21 +7,11 @@ export default function Price() {
       className="bg-white border-b border-amber-100 py-16 px-6"
     >
       <div className="max-w-4xl mx-auto">
-        <div className="text-xs text-amber-500 tracking-widest uppercase mb-2">
-          price
-        </div>
-
-        <h2
-          className="text-2xl text-stone-900 mb-2"
-          style={{ fontFamily: "var(--font-noto-serif)" }}
-        >
-          料金
-        </h2>
+        <SectionHeader label="price" title="料金" />
 
         <p className="text-sm text-amber-700 mb-8">すべて税込・歌い放題</p>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
-          {/* 昼 共通 */}
           <div className="bg-amber-50 border border-amber-100 rounded-xl p-6">
             <div className="text-xs text-amber-500 mb-2">昼 12:00〜18:00</div>
             <div className="text-base font-medium text-amber-800 mb-4">
@@ -35,7 +27,6 @@ export default function Price() {
             </div>
           </div>
 
-          {/* 夜 男性 */}
           <div className="bg-amber-50 border border-amber-100 rounded-xl p-6">
             <div className="text-xs text-amber-500 mb-2">夜 18:00〜23:00</div>
             <div className="text-base font-medium text-amber-800 mb-4">
@@ -51,7 +42,6 @@ export default function Price() {
             </div>
           </div>
 
-          {/* 夜 女性 */}
           <div className="bg-amber-50 border border-amber-100 rounded-xl p-6">
             <div className="text-xs text-amber-500 mb-2">夜 18:00〜23:00</div>
             <div className="text-base font-medium text-amber-800 mb-4">
