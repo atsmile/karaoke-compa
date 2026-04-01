@@ -1,5 +1,5 @@
-import SectionHeader from "../SectionHeader";
-import SectionWrapper from "../SectionWrapper";
+import SectionHeader from "@components/SectionHeader";
+import SectionWrapper from "@components/SectionWrapper";
 import PriceCard from "./PriceCard";
 
 export default function Price() {

@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import TelButton from "../TelButton";
+import TelButton from "@components/TelButton";
 import FeatureBadge from "./FeatureBadge";
 
 export default function KeyVisual() {
