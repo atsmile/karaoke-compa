@@ -1,7 +1,6 @@
 "use client";
-import TelButton from "./TelButton";
-
 import { useState } from "react";
+import TelButton from "@components/TelButton";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
