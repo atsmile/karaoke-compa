@@ -1,4 +1,5 @@
 "use client";
+import TelButton from "./TelButton";
 
 import { useState } from "react";
 
@@ -30,12 +31,7 @@ export default function Header() {
           >
             アクセス
           </a>
-          <a
-            href="tel:0669284566"
-            className="text-sm font-bold text-amber-800 hover:text-amber-900 transition-colors"
-          >
-            ☎ 電話する
-          </a>
+          <TelButton size="sm" />
         </nav>
 
         {/* ハンバーガーボタン（スマホ用） */}
@@ -55,7 +51,6 @@ export default function Header() {
         </button>
       </div>
 
-      {/* スマホ用メニュー */}
       {/* スマホ用メニュー */}
       <div
         className={`md:hidden absolute top-16 left-0 right-0 bg-white border-t border-amber-100 shadow-md transition-all duration-300 overflow-hidden ${isOpen ? "max-h-48" : "max-h-0"}`}

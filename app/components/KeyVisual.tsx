@@ -1,4 +1,5 @@
 import Image from "next/image";
+import TelButton from "./TelButton";
 
 export default function KeyVisual() {
   return (
@@ -53,12 +54,7 @@ export default function KeyVisual() {
           ))}
         </div>
 
-        <a
-          href="tel:0669284566"
-          className="inline-block bg-amber-800 hover:bg-amber-900 text-white px-8 py-3 rounded-lg text-lg tracking-wide transition-colors w-fit"
-        >
-          ☎ 06-6928-4566
-        </a>
+        <TelButton />
       </div>
     </section>
   );

@@ -1,3 +1,5 @@
+import TelButton from "./TelButton";
+
 export default function Access() {
   return (
     <section
@@ -44,12 +46,7 @@ export default function Access() {
               </tbody>
             </table>
 
-            <a
-              href="tel:0669284566"
-              className="inline-block mt-6 bg-amber-800 hover:bg-amber-900 text-white px-8 py-3 rounded-lg text-lg tracking-wide transition-colors"
-            >
-              ☎ 06-6928-4566
-            </a>
+            <TelButton />
           </div>
 
           {/* Googleマップ */}
