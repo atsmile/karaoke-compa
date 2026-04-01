@@ -1,7 +1,9 @@
-import { ReactNode } from "react";
+"use client";
+
+import { motion } from "framer-motion";
 
 type Props = {
-  children: ReactNode;
+  children: React.ReactNode;
   variant?: "white" | "amber";
   id?: string;
 };
@@ -17,12 +19,16 @@ export default function SectionWrapper({
   };
 
   return (
-    <section
+    <motion.section
       id={id}
       data-layout="SectionWrapper"
       className={`${variantClass[variant]} border-b border-amber-100 py-16 px-6`}
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
+      viewport={{ once: true }}
     >
       <div className="max-w-4xl mx-auto">{children}</div>
-    </section>
+    </motion.section>
   );
 }
