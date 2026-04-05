@@ -77,3 +77,8 @@ GitHub Actionsで以下を自動実行しています。
 - TypeScript型チェック
 - ESLint
 - ビルド確認
+
+## 今後の予定
+
+- 姉妹店舗ページの追加
+- Neon（PostgreSQL）+ Prismaによるデータベース管理への移行（店舗情報・料金・FAQをDB管理）
