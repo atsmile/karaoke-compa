@@ -24,6 +24,7 @@ https://karaoke-compa.com
 - SEO対策（メタデータ・構造化データ・サイトマップ）
 
 ## ディレクトリ構成
+```
 
 app/
 ├── components/
@@ -50,6 +51,7 @@ app/
 └── robots.ts
 public/
 └── images/
+```
 
 ## 開発環境のセットアップ
 
