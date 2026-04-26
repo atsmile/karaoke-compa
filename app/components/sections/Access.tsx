@@ -1,6 +1,6 @@
-import SectionHeader from "@components/ui/SectionHeader";
-import SectionWrapper from "@components/ui/SectionWrapper";
-import TelButton from "@components/ui/TelButton";
+import SectionHeader from "@ui/SectionHeader";
+import SectionWrapper from "@ui/SectionWrapper";
+import TelButton from "@ui/TelButton";
 
 export default function Access() {
   return (

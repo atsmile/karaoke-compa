@@ -1,5 +1,5 @@
-import SectionHeader from "@components/ui/SectionHeader";
-import SectionWrapper from "@components/ui/SectionWrapper";
+import SectionHeader from "@ui/SectionHeader";
+import SectionWrapper from "@ui/SectionWrapper";
 import FaqItem from "./FaqItem";
 
 const faqs = [

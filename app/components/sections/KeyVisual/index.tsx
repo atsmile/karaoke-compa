@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import TelButton from "@components/ui/TelButton";
+import TelButton from "@ui/TelButton";
 import FeatureBadge from "./FeatureBadge";
 
 const fadeInStyle = (delay: number): React.CSSProperties => ({
