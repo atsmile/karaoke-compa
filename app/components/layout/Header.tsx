@@ -8,7 +8,6 @@ export default function Header() {
   return (
     <header className="bg-white border-b border-amber-100 sticky top-0 z-50">
       <div className="max-w-4xl mx-auto px-6 h-16 flex items-center justify-between">
-        {/* ロゴ */}
         <div
           className="text-lg font-bold text-amber-800 tracking-wide"
           style={{ fontFamily: "var(--font-noto-serif)" }}
@@ -37,6 +36,8 @@ export default function Header() {
         <button
           className="md:hidden flex flex-col gap-1.5 p-2"
           onClick={() => setIsOpen(!isOpen)}
+          aria-label={isOpen ? "メニューを閉じる" : "メニューを開く"}
+          aria-expanded={isOpen}
         >
           <span
             className={`block w-6 h-0.5 bg-amber-800 transition-transform duration-300 ${isOpen ? "rotate-45 translate-y-2" : ""}`}
@@ -73,6 +74,7 @@ export default function Header() {
             href="tel:0669284566"
             className="text-sm font-bold text-amber-800 py-2"
             onClick={() => setIsOpen(false)}
+            aria-label="電話する 06-6928-4566"
           >
             ☎ 06-6928-4566
           </a>

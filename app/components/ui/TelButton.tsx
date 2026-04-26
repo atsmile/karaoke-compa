@@ -13,6 +13,7 @@ export default function TelButton({ size = "md" }: Props) {
     <a
       data-layout="TelButton"
       href="tel:0669284566"
+      aria-label="電話する 06-6928-4566"
       className={`
         w-fit block bg-amber-800 hover:bg-amber-900 text-white rounded-lg tracking-wide transition-colors ${sizeClass[size]}`}
     >
