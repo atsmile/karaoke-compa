@@ -1,8 +1,8 @@
-import KeyVisual from "@components/KeyVisual";
-import Gallery from "@components/Gallery";
-import Price from "@components/Price";
-import Faq from "@components/Faq";
-import Access from "@components/Access";
+import KeyVisual from "@components/sections/KeyVisual";
+import Gallery from "@components/sections/Gallery";
+import Price from "@components/sections/Price";
+import Faq from "@components/sections/Faq";
+import Access from "@components/sections/Access";
 
 export default function Home() {
   return (
