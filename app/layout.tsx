@@ -3,9 +3,9 @@ import type { Metadata } from "next";
 import { Noto_Sans_JP, Noto_Serif_JP } from "next/font/google";
 import "./globals.css";
 
-import Header from "@components/Header";
-import Footer from "@components/Footer";
-import JsonLd from "@components/JsonLd";
+import Header from "@components/layout/Header";
+import Footer from "@components/layout/Footer";
+import JsonLd from "./JsonLd";
 
 const notoSansJP = Noto_Sans_JP({
   variable: "--font-noto-sans",

@@ -1,6 +1,6 @@
 import Image from "next/image";
-import SectionHeader from "@components/SectionHeader";
-import SectionWrapper from "@components/SectionWrapper";
+import SectionHeader from "@components/ui/SectionHeader";
+import SectionWrapper from "@components/ui/SectionWrapper";
 
 export default function Gallery() {
   const photos = [
