@@ -25,7 +25,7 @@ export default function Access() {
                 key={item.label}
                 className="flex gap-6 border-b border-amber-100 py-3"
               >
-                <dt className="text-amber-500 font-medium whitespace-nowrap w-20 shrink-0">
+                <dt className="text-amber-700 font-medium whitespace-nowrap w-20 shrink-0">
                   {item.label}
                 </dt>
                 <dd className="text-stone-900 leading-relaxed">{item.value}</dd>
@@ -46,6 +46,7 @@ export default function Access() {
             allowFullScreen
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
+            title="カラオケ喫茶コンパの地図"
           />
         </div>
       </div>

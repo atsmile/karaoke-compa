@@ -9,13 +9,13 @@ export default function Footer() {
           カラオケ喫茶 コンパ
         </div>
 
-        <div className="text-sm text-amber-700 leading-relaxed mb-4">
+        <div className="text-sm text-amber-400 leading-relaxed mb-4">
           〒534-0024 大阪府大阪市都島区東野田町5-7-1 千両ビル204号
           <br />
           TEL: 06-6928-4566 / 営業時間: 12:00〜23:00 / 年中無休
         </div>
 
-        <div className="text-xs text-stone-600">
+        <div className="text-xs text-stone-400">
           © 2025 カラオケ喫茶 コンパ All Rights Reserved.
         </div>
       </div>
