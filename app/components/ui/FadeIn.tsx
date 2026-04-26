@@ -1,6 +1,6 @@
 "use client";
 
-import { useInView } from "@/app/hooks/useInView";
+import { useInView } from "@hooks/useInView";
 
 type Props = {
   children: React.ReactNode;
@@ -10,23 +10,12 @@ type Props = {
 export function FadeIn({ children, className = "" }: Props) {
   const { ref, isInView } = useInView();
 
-  const prefersReducedMotion =
-    typeof window !== "undefined"
-      ? window.matchMedia("(prefers-reduced-motion: reduce)").matches
-      : false;
-
   return (
     <div
       ref={ref}
-      className={className}
-      style={{
-        opacity: isInView ? 1 : 0,
-        transform:
-          isInView || prefersReducedMotion ? "none" : "translateY(24px)",
-        transition: prefersReducedMotion
-          ? "none"
-          : "opacity 0.6s ease, transform 0.6s ease",
-      }}
+      className={`transition-all duration-700 ease-out ${
+        isInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
+      } ${className}`}
     >
       {children}
     </div>
