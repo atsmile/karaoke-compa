@@ -4,12 +4,15 @@ import SectionWrapper from "@ui/SectionWrapper";
 
 export default function Gallery() {
   const photos = [
-    { src: "/images/interior.jpeg", alt: "店内ソファ席" },
-    { src: "/images/stage2.jpeg", alt: "ステージ・照明" },
-    { src: "/images/counter.jpeg", alt: "カウンター席" },
-    { src: "/images/drinks.jpeg", alt: "ドリンク" },
-    { src: "/images/livedam.jpeg", alt: "LIVE DAM" },
-    { src: "/images/mic.jpeg", alt: "マイク" },
+    { src: "/images/interior.jpeg", alt: "カラオケ喫茶コンパの店内ソファ席" },
+    { src: "/images/stage2.jpeg", alt: "カラオケ喫茶コンパのステージと照明" },
+    { src: "/images/counter.jpeg", alt: "カラオケ喫茶コンパのカウンター席" },
+    {
+      src: "/images/drinks.jpeg",
+      alt: "カラオケ喫茶コンパで提供しているドリンク",
+    },
+    { src: "/images/livedam.jpeg", alt: "カラオケ機器 LIVE DAM" },
+    { src: "/images/mic.jpeg", alt: "カラオケ用マイク" },
   ];
 
   return (
