@@ -30,7 +30,7 @@ jobs:
         run: npx serve@latest out -l 3000 &
 
       - name: Wait for server
-        run: npx wait-on http://localhost:3000 --timeout 30000
+        run: npx wait-on http://localhost:3000 --timeout 60000
 
       - name: Run VRT
         run: npx playwright test
