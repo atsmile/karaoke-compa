@@ -6,6 +6,9 @@ export default defineConfig({
   updateSnapshots: "missing",
   use: {
     baseURL: "http://localhost:3000",
+    contextOptions: {
+      reducedMotion: "reduce",
+    },
   },
   projects: [
     {
