@@ -1,6 +1,4 @@
-"use client";
-
-import { motion } from "framer-motion";
+import { FadeIn } from "@/app/components/ui/FadeIn";
 
 type Props = {
   children: React.ReactNode;
@@ -19,16 +17,14 @@ export default function SectionWrapper({
   };
 
   return (
-    <motion.section
+    <section
       id={id}
       data-layout="SectionWrapper"
       className={`${variantClass[variant]} border-b border-amber-100 py-16 px-6`}
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
-      transition={{ duration: 0.6, ease: "easeOut" }}
-      viewport={{ once: true, margin: "-50px" }}
     >
-      <div className="max-w-4xl mx-auto">{children}</div>
-    </motion.section>
+      <FadeIn>
+        <div className="max-w-4xl mx-auto">{children}</div>
+      </FadeIn>
+    </section>
   );
 }
