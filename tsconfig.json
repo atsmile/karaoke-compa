@@ -20,7 +20,11 @@
     ],
     "paths": {
       "@/*": ["./*"],
-      "@components/*": ["./app/components/*"]
+      "@components/*": ["./app/components/*"],
+      "@layout/*": ["./app/components/layout/*"],
+      "@sections/*": ["./app/components/sections/*"],
+      "@ui/*": ["./app/components/ui/*"],
+      "@hooks/*": ["./app/hooks/*"]
     }
   },
   "include": [
