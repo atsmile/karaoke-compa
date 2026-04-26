@@ -45,7 +45,7 @@ jobs:
           git config user.email "github-actions@github.com"
           git add tests/vrt/__snapshots__/
           git diff --staged --quiet || git commit -m "chore: Linux用VRTベースラインを更新"
-          git push origin HEAD:${{ github.head_ref }}
+          git push origin HEAD:${{ github.head_ref }} --force
 
       - name: Upload test results
         if: always()
