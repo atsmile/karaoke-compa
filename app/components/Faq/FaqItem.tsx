@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
 
 type Props = {
   question: string;
@@ -24,21 +23,12 @@ export default function FaqItem({ question, answer }: Props) {
           +
         </span>
       </div>
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: "auto" }}
-            exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.3 }}
-            className="overflow-hidden"
-          >
-            <p className="text-sm text-stone-600 pb-4 leading-relaxed">
-              {answer}
-            </p>
-          </motion.div>
-        )}
-      </AnimatePresence>
+      <div
+        className="overflow-hidden transition-all duration-300"
+        style={{ maxHeight: isOpen ? "200px" : "0px" }}
+      >
+        <p className="text-sm text-stone-600 pb-4 leading-relaxed">{answer}</p>
+      </div>
     </div>
   );
 }
