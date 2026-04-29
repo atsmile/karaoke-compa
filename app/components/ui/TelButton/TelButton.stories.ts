@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/nextjs-vite";
-import TelButton from "./TelButton";
+import TelButton from "./index";
 
 const meta: Meta<typeof TelButton> = {
   title: "UI/TelButton",
