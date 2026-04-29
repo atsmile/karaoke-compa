@@ -1,13 +1,9 @@
 "use client";
 
 import { useState } from "react";
+import type { FaqItem as FaqItemType } from "@defs/types";
 
-type Props = {
-  question: string;
-  answer: string;
-};
-
-export default function FaqItem({ question, answer }: Props) {
+export default function FaqItem({ question, answer }: FaqItemType) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
