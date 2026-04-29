@@ -1,6 +1,7 @@
 import SectionHeader from "@ui/SectionHeader";
 import SectionWrapper from "@ui/SectionWrapper";
 import TelButton from "@ui/TelButton";
+import { storeInfo } from "@data/access";
 
 export default function Access() {
   return (
@@ -10,17 +11,7 @@ export default function Access() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         <div>
           <dl className="text-sm">
-            {[
-              { label: "店名", value: "カラオケ喫茶 コンパ" },
-              {
-                label: "住所",
-                value:
-                  "〒534-0024 大阪府大阪市都島区東野田町5-7-1 千両ビル204号",
-              },
-              { label: "電話", value: "06-6928-4566" },
-              { label: "営業時間", value: "12:00〜23:00" },
-              { label: "定休日", value: "年中無休" },
-            ].map((item) => (
+            {storeInfo.map((item) => (
               <div
                 key={item.label}
                 className="flex gap-6 border-b border-amber-100 py-3"
