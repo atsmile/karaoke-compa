@@ -26,6 +26,8 @@
       "@sections/*": ["./app/components/sections/*"],
       "@ui/*": ["./app/components/ui/*"],
       "@data/*": ["./app/data/*"],
+      "@defs/*": ["./app/defs/*"],
+      "@constants/*": ["./app/defs/constants/*"],
       "@hooks/*": ["./app/hooks/*"]
     }
   },
