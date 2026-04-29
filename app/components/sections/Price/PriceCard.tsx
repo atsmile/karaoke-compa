@@ -1,16 +1,11 @@
-type Props = {
-  time: string;
-  title: string;
-  setPrice: number;
-  flatRatePrice: number;
-};
+import type { PriceItem } from "@defs/types";
 
 export default function PriceCard({
   time,
   title,
   setPrice,
   flatRatePrice,
-}: Props) {
+}: PriceItem) {
   return (
     <div
       data-layout="PriceCard"
