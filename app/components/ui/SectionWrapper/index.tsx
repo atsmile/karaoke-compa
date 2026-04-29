@@ -1,4 +1,4 @@
-import { FadeIn } from "@/app/components/ui/FadeIn";
+import { FadeIn } from "@ui/FadeIn";
 
 type Props = {
   children: React.ReactNode;
