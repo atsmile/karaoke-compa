@@ -11,6 +11,7 @@ https://karaoke-compa.com
 - [Next.js 16](https://nextjs.org/) - Reactフレームワーク
 - [TypeScript](https://www.typescriptlang.org/) - 型安全な開発
 - [Tailwind CSS v4](https://tailwindcss.com/) - スタイリング
+- [Storybook 10](https://storybook.js.org/) - コンポーネントカタログ
 - [Cloudflare Pages](https://pages.cloudflare.com/) - ホスティング
 
 ## 機能
@@ -29,25 +30,27 @@ https://karaoke-compa.com
 app/
 ├── components/
 │   ├── layout/
-│   │   ├── Header.tsx
-│   │   └── Footer.tsx
+│   │   ├── Header/
+│   │   └── Footer/
 │   ├── sections/
 │   │   ├── KeyVisual/
 │   │   │   ├── index.tsx
-│   │   │   └── FeatureBadge.tsx
-│   │   ├── Gallery.tsx
+│   │   │   └── FeatureBadge/
+│   │   ├── Gallery/
 │   │   ├── Price/
 │   │   │   ├── index.tsx
 │   │   │   └── PriceCard.tsx
 │   │   ├── Faq/
 │   │   │   ├── index.tsx
 │   │   │   └── FaqItem.tsx
-│   │   └── Access.tsx
+│   │   └── Access/
 │   └── ui/
-│       ├── SectionHeader.tsx
-│       ├── SectionWrapper.tsx
-│       ├── TelButton.tsx
-│       └── FadeIn.tsx
+│       ├── TelButton/
+│       ├── SectionHeader/
+│       ├── SectionWrapper/
+│       └── FadeIn/
+├── data/
+├── defs/
 ├── hooks/
 │   └── useInView.ts
 ├── JsonLd.tsx
@@ -57,10 +60,9 @@ app/
 └── robots.ts
 public/
 └── images/
+.storybook/
 tests/
 └── vrt/
-├── top.spec.ts
-└── snapshots/
 ```
 
 ## 開発環境のセットアップ
@@ -73,29 +75,33 @@ git clone https://github.com/atsmile/karaoke-compa.git
 npm install
 
 # Playwrightブラウザをインストール
-npx playwright install chromium webkit
+npx playwright install chromium
 
 # 開発サーバーを起動
 npm run dev
 ```
 
-## VRT（Visual Regression Testing）
-
-Playwrightを使ったスクリーンショット比較テストを導入しています。
+## Storybook
 
 ```bash
-# ベースライン撮影
-npx playwright test --update-snapshots
-
-# 差分確認
-npx playwright test
+# Storybookを起動
+npm run storybook
 ```
 
-### 別環境でクローンした場合の注意
+Storybookは以下にデプロイされています。  
+https://karaoke-compa-storybook.atsmile.dev
 
-GitHubリポジトリの以下の設定が必要です。
+## VRT（Visual Regression Testing）
 
-`Settings` → `Actions` → `General` → `Workflow permissions` → `Read and write permissions`
+`@storycap-testrun/browser` + `reg-suit` を使ったStorybookベースのコンポーネント単位VRTを導入しています。
+
+```bash
+# スクリーンショット撮影
+npx vitest --project storybook run
+
+# 差分確認・S3アップロード
+npx reg-suit run
+```
 
 ## デプロイ
 
@@ -105,12 +111,10 @@ GitHubのmainブランチへのpushで自動デプロイされます。
 
 GitHub ActionsでPR時に以下を自動実行しています。
 
-- VRT（スクリーンショット差分確認）
+- VRT（Storybookコンポーネントの差分確認・S3レポート・PRコメント通知）
 - Cloudflare Pagesへの自動デプロイ
 
 ## 今後の予定
 
-- reg-suit導入（VRT差分レポートのPRコメント通知）
-- Storybook導入
 - 姉妹店舗ページの追加
-- Neon（PostgreSQL）+ Prismaによるデータベース管理への移行
+- Supabase（PostgreSQL）+ Prismaによるデータベース管理への移行
