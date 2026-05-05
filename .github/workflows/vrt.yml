@@ -12,7 +12,6 @@ on:
       - main
     paths-ignore:
       - "**.md"
-      - ".github/**"
 
 jobs:
   vrt:
