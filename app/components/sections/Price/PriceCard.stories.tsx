@@ -11,14 +11,6 @@ const meta: Meta<typeof PriceCard> = {
 export default meta;
 type Story = StoryObj<typeof PriceCard>;
 
-export const Daytime: Story = {
+export const Default: Story = {
   args: prices[0],
-};
-
-export const NightMale: Story = {
-  args: prices[1],
-};
-
-export const NightFemale: Story = {
-  args: prices[2],
 };
