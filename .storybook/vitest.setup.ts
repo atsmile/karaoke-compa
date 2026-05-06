@@ -10,7 +10,7 @@ beforeAll(() => {
 });
 
 beforeEach(async () => {
-  await page.viewport(1280, 720);
+  // ビューポートは Story の globals.viewportで制御する
 });
 
 afterEach(async (context) => {
