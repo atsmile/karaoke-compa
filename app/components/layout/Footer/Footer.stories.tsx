@@ -13,10 +13,4 @@ const meta: Meta<typeof Footer> = {
 export default meta;
 type Story = StoryObj<typeof Footer>;
 
-export const Desktop: Story = {};
-
-export const Mobile: Story = {
-  globals: {
-    viewport: { value: "mobile" },
-  },
-};
+export const Default: Story = {};
