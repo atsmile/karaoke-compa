@@ -65,7 +65,7 @@ jobs:
         run: npx playwright install --with-deps chromium
 
       - name: Run screenshots
-        run: npx vitest --project storybook run
+        run: npx vitest --project storybook-mobile --project storybook-desktop run
 
       - name: Run reg-suit
         run: npx reg-suit run
