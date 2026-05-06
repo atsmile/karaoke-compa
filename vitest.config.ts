@@ -24,7 +24,7 @@ export default defineConfig({
             viewport: { width: 1280, height: 800 },
             output: {
               dir: "__screenshots__",
-              file: path.join("[file]", "desktop", "[name].png"),
+              file: path.join("[file]", "desktop-[name].png"),
             },
           }),
         ],
@@ -48,7 +48,7 @@ export default defineConfig({
             viewport: { width: 390, height: 844 },
             output: {
               dir: "__screenshots__",
-              file: path.join("[file]", "mobile", "[name].png"),
+              file: path.join("[file]", "mobile-[name].png"),
             },
           }),
         ],
