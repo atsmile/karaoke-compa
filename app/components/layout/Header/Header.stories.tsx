@@ -15,4 +15,4 @@ type Story = StoryObj<typeof Header>;
 
 export const Default: Story = {};
 
-export const MenuOpen: Story = {};
+export const Desktop: Story = {};
