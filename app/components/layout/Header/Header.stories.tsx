@@ -13,6 +13,10 @@ const meta: Meta<typeof Header> = {
 export default meta;
 type Story = StoryObj<typeof Header>;
 
-export const Default: Story = {};
+export const Desktop: Story = {};
 
-export const MenuOpen: Story = {};
+export const Mobile: Story = {
+  globals: {
+    viewport: { value: "mobile" },
+  },
+};
