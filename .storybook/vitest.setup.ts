@@ -1,16 +1,23 @@
-import { afterEach, beforeAll, beforeEach } from "vitest";
+import { afterEach, beforeEach } from "vitest";
 import { vi } from "vitest";
 import { page } from "vitest/browser";
 import { screenshot } from "@storycap-testrun/browser";
 
-beforeAll(() => {
-  vi.mock("@hooks/useInView", () => ({
-    useInView: () => ({ ref: { current: null }, isInView: true }),
-  }));
-});
+vi.mock("@hooks/useInView", () => ({
+  useInView: () => ({ ref: { current: null }, isInView: true }),
+}));
 
-beforeEach(async () => {
-  // ビューポートはStoryのglobals.viewportで制御する
+beforeEach(async (context) => {
+  const projectName = context.task.file?.projectName ?? "";
+  const isMobileProject = projectName.includes("storybook-mobile");
+  const isDesktopStory = context.task.name.includes("Desktop");
+
+  if (isMobileProject && isDesktopStory) {
+    context.skip();
+  }
+  if (!isMobileProject && !isDesktopStory) {
+    context.skip();
+  }
 });
 
 afterEach(async (context) => {

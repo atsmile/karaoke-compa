@@ -24,7 +24,7 @@ const createStorybookProject = (
       viewport,
       output: {
         dir: "__screenshots__",
-        file: path.join("[file]", `${name}-[name].png`),
+        file: path.join("[file]", `[name]-${name}.png`),
       },
     }),
   ],
