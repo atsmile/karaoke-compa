@@ -43,7 +43,7 @@ const createStorybookProject = (
 export default defineConfig({
   test: {
     projects: [
-      createStorybookProject("storybook-mobile", { width: 390, height: 844 }),
+      createStorybookProject("storybook-mobile", { width: 414, height: 896 }),
       createStorybookProject("storybook-desktop", { width: 1280, height: 800 }),
     ],
   },
