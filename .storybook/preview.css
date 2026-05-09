@@ -7,3 +7,8 @@
   transition-duration: 0s !important;
   transition-delay: 0s !important;
 }
+
+/* VRT用: opacity-0 を表示状態に上書き */
+.opacity-0 {
+  opacity: 1 !important;
+}
