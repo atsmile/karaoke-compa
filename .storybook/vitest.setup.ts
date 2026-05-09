@@ -1,4 +1,4 @@
-import { afterEach, beforeEach } from "vitest";
+import { afterEach, beforeEach, beforeAll } from "vitest";
 import { vi } from "vitest";
 import { page } from "vitest/browser";
 import { screenshot } from "@storycap-testrun/browser";
@@ -18,6 +18,12 @@ beforeEach(async (context) => {
   if (!isMobileProject && !isDesktopStory) {
     context.skip();
   }
+});
+
+beforeAll(() => {
+  vi.mock("@hooks/useInView", () => ({
+    useInView: () => ({ ref: { current: null }, isInView: true }),
+  }));
 });
 
 afterEach(async (context) => {
