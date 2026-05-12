@@ -11,6 +11,13 @@ const meta: Meta<typeof PriceCard> = {
 export default meta;
 type Story = StoryObj<typeof PriceCard>;
 
-export const Default: Story = {
+export const Mobile: Story = {
+  args: prices[0],
+};
+
+export const Desktop: Story = {
+  globals: {
+    viewport: { value: "desktop" },
+  },
   args: prices[0],
 };

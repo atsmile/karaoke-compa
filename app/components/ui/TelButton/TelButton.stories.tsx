@@ -10,19 +10,46 @@ const meta: Meta<typeof TelButton> = {
 export default meta;
 type Story = StoryObj<typeof TelButton>;
 
-export const Small: Story = {
+export const Small_Mobile: Story = {
   args: {
     size: "sm",
   },
 };
 
-export const Medium: Story = {
+export const Medium_Mobile: Story = {
   args: {
     size: "md",
   },
 };
 
-export const Large: Story = {
+export const Large_Mobile: Story = {
+  args: {
+    size: "lg",
+  },
+};
+
+export const Small_Desktop: Story = {
+  globals: {
+    viewport: { value: "desktop" },
+  },
+  args: {
+    size: "sm",
+  },
+};
+
+export const Medium_Desktop: Story = {
+  globals: {
+    viewport: { value: "desktop" },
+  },
+  args: {
+    size: "md",
+  },
+};
+
+export const Large_Desktop: Story = {
+  globals: {
+    viewport: { value: "desktop" },
+  },
   args: {
     size: "lg",
   },

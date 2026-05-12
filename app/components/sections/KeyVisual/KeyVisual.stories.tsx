@@ -13,4 +13,10 @@ const meta: Meta<typeof KeyVisual> = {
 export default meta;
 type Story = StoryObj<typeof KeyVisual>;
 
-export const Default: Story = {};
+export const Mobile: Story = {};
+
+export const Desktop: Story = {
+  globals: {
+    viewport: { value: "desktop" },
+  },
+};
