@@ -97,7 +97,7 @@ https://karaoke-compa-storybook.atsmile.dev
 
 ```bash
 # スクリーンショット撮影
-npx vitest --project storybook-mobile --project storybook-desktop run
+npx vitest --project sb-mobile --project sb-desktop run
 
 # 差分確認・S3アップロード
 npx reg-suit run

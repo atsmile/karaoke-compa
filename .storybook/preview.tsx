@@ -3,6 +3,9 @@ import "../app/globals.css";
 import "./preview.css";
 
 const preview: Preview = {
+  initialGlobals: {
+    viewport: { value: "mobile2" },
+  },
   parameters: {
     controls: {
       matchers: {
