@@ -13,14 +13,34 @@ const meta: Meta<typeof SectionWrapper> = {
 export default meta;
 type Story = StoryObj<typeof SectionWrapper>;
 
-export const White: Story = {
+export const White_Mobile: Story = {
   args: {
     variant: "white",
     children: "コンテンツが入ります",
   },
 };
 
-export const Amber: Story = {
+export const White_Desktop: Story = {
+  globals: {
+    viewport: { value: "desktop" },
+  },
+  args: {
+    variant: "white",
+    children: "コンテンツが入ります",
+  },
+};
+
+export const Amber_Mobile: Story = {
+  args: {
+    variant: "amber",
+    children: "コンテンツが入ります",
+  },
+};
+
+export const Amber_Desktop: Story = {
+  globals: {
+    viewport: { value: "desktop" },
+  },
   args: {
     variant: "amber",
     children: "コンテンツが入ります",

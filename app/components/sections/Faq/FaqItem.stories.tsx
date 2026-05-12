@@ -11,6 +11,13 @@ const meta: Meta<typeof FaqItem> = {
 export default meta;
 type Story = StoryObj<typeof FaqItem>;
 
-export const Default: Story = {
+export const Mobile: Story = {
   args: faqs[0],
+};
+
+export const Desktop: Story = {
+  args: faqs[0],
+  globals: {
+    viewport: { value: "desktop" },
+  },
 };

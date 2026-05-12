@@ -10,7 +10,16 @@ const meta: Meta<typeof FadeIn> = {
 export default meta;
 type Story = StoryObj<typeof FadeIn>;
 
-export const Default: Story = {
+export const Mobile: Story = {
+  args: {
+    children: "フェードインするコンテンツ",
+  },
+};
+
+export const Desktop: Story = {
+  globals: {
+    viewport: { value: "desktop" },
+  },
   args: {
     children: "フェードインするコンテンツ",
   },
