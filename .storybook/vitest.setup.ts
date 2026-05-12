@@ -9,7 +9,7 @@ vi.mock("@hooks/useInView", () => ({
 
 beforeEach(async (context) => {
   const projectName = context.task.file?.projectName ?? "";
-  const isMobileProject = projectName.includes("storybook-mobile");
+  const isMobileProject = projectName.includes("sb-mobile");
   const isDesktopStory = context.task.name.includes("Desktop");
 
   if (isMobileProject && isDesktopStory) {
