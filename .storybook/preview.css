@@ -9,6 +9,6 @@
 }
 
 /* VRT用: opacity-0 を表示状態に上書き */
-.opacity-0 {
+[data-layout="KeyVisual"] .opacity-0 {
   opacity: 1 !important;
 }

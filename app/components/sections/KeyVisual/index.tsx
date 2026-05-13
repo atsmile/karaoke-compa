@@ -7,7 +7,10 @@ import { features } from "@data/keyvisual";
 
 export default function KeyVisual() {
   return (
-    <section className="relative w-full h-[400px] md:h-[500px] bg-stone-900">
+    <section
+      data-layout="KeyVisual"
+      className="relative w-full h-[400px] md:h-[500px] bg-stone-900"
+    >
       <Image
         src="/images/stage.jpeg"
         alt="カラオケ喫茶コンパ ステージ"
