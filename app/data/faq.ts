@@ -2,6 +2,10 @@ import type { FaqItem } from "@defs/types/faq";
 
 export const faqs: FaqItem[] = [
   {
+    question: "一人でも利用できますか？",
+    answer: "はい、お一人様でもお気軽にお越しください。",
+  },
+  {
     question: "団体でも可能ですか？",
     answer: "はい、団体でも可能ですのでお気軽にお越しください。",
   },
@@ -16,7 +20,7 @@ export const faqs: FaqItem[] = [
   {
     question: "飲み放題はありますか？",
     answer:
-      "はい、単品メニューから飲み放題メニューをご用意しておりますので、ぜひお越しください。",
+      "はい、一杯からでも飲み放題でもご用意しておりますので、ぜひお越しください。",
   },
   {
     question: "キャッシュレス対応はしていますか？",
