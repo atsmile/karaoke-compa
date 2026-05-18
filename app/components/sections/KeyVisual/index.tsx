@@ -9,7 +9,7 @@ export default function KeyVisual() {
   return (
     <section
       data-layout="KeyVisual"
-      className="relative w-full h-[400px] md:h-[500px] bg-stone-900"
+      className="relative w-full h-100 md:h-125 bg-stone-900"
     >
       <Image
         src="/images/stage.jpeg"
@@ -34,9 +34,9 @@ export default function KeyVisual() {
             textShadow: "0 2px 8px rgba(0,0,0,0.5)",
           }}
         >
-          お昼から気軽に
+          お昼から夜まで
           <br />
-          歌えるお店
+          気軽に歌えるお店
         </h1>
 
         <p className="animate-fade-in [animation-delay:300ms] opacity-0 text-sm text-amber-300 mb-6">
