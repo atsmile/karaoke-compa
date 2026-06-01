@@ -11,7 +11,13 @@ export default function Access() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         <div>
           <dl className="text-sm">
-            {storeInfo.map((item) => (
+            {[
+              { label: "店名", value: storeInfo.name },
+              { label: "住所", value: storeInfo.address },
+              { label: "電話", value: storeInfo.phone },
+              { label: "営業時間", value: storeInfo.businessHours },
+              { label: "定休日", value: storeInfo.closedDays },
+            ].map((item) => (
               <div
                 key={item.label}
                 className="flex gap-6 border-b border-amber-100 py-3"
@@ -37,7 +43,7 @@ export default function Access() {
             allowFullScreen
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
-            title="カラオケ喫茶コンパの地図"
+            title={`${storeInfo.name}の地図`}
           />
         </div>
       </div>
