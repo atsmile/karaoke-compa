@@ -1,4 +1,7 @@
 export type StoreInfo = {
-  label: string;
-  value: string;
+  name: string;
+  address: string;
+  phone: string;
+  businessHours: string;
+  closedDays: string;
 };
